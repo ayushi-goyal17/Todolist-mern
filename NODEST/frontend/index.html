@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <p>This Is A Test API</p>
+    <button onclick="getStudentsData()">Get Data </button>
+    <script>
+        const getStudentsData = () => {
+            var apiUrl = "http://localhost:4000";
+            fetch(apiUrl)
+                .then((res) => {
+                    return res.json();
+                })
+                .then((res) => {
+                    console.log(res);
+                });
+        };
+    </script>
+</body>
+
+</html>
